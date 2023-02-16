@@ -1,39 +1,20 @@
-const who = ["The dog", "My granma", "His turtle", "My bird"];
-const what = ["eat", "pissed", "crushed", "broked"];
-const when = [
-  "before the class!",
-  "right in time!",
-  "when I finished!",
-  "during my lunch!",
-  "while I was praying!"
-];
+window.onload = () => {
+  //write your code here
+  const pronoun = ["the", "our"];
+  const adj = ["great", "big"];
+  const noun = ["jogger", "racoon"];
+  const domain = [".com", ".es", ".net", ".us"];
+  newDomain(pronoun, adj, noun, domain);
+};
 
-function getRandomNumber(arr) {
-  const RandomIndex = Math.floor(Math.random() * arr.length);
-  return arr[RandomIndex];
+function newDomain(pronoun, adj, noun, domain) {
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < domain.length; l++) {
+          console.log(pronoun[i] + adj[j] + noun[k] + domain[l]);
+        }
+      }
+    }
+  }
 }
-
-function getExcuse() {
-  let whoindex = getWho();
-  let whatindex = getWhat();
-  let whenindex = getWhen();
-  let Excuse = getCompleteExcuse(whoindex, whatindex, whenindex);
-
-  document.getElementById("ExcusaCompleta").innerHTML = Excuse;
-}
-function getCompleteExcuse(whoindex, whatindex, whenindex) {
-  return whoindex + " " + whatindex + " " + whenindex;
-}
-
-function getWhen() {
-  return getRandomNumber(when);
-}
-
-function getWhat() {
-  return getRandomNumber(what);
-}
-
-function getWho() {
-  return getRandomNumber(who);
-}
-
