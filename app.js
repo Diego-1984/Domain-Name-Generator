@@ -21,3 +21,10 @@ function newDomain(pronoun, adj, subjet, extension) {
     }
   }
 }
+// Voy a intentar refactorizar con foreach. Si quitas de aqui para abajo funciona
+const newDomain=()=>{
+  pronoun.array.forEach(element => {
+    adj.array.forEach()
+    
+  });
+}
