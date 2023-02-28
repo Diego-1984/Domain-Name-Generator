@@ -8,23 +8,15 @@ window.onload = () => {
 };
 
 function newDomain(pronoun, adj, subjet, extension) {
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < subjet.length; k++) {
-        for (let l = 0; l < extension.length; l++) {
-          let div= document.createElement("div");
-          div.innerText=`${pronoun[i]}${adj[j]}${subjet[k]}${extension[l]}`
+  pronoun.forEach(pronoun => {
+    adj.forEach(adj => {
+      subjet.forEach(subjet => {
+        extension.forEach(extension => {
+          const div = document.createElement("div");
+          div.innerText = `${pronoun}${adj}${subjet}${extension}`;
           document.body.appendChild(div);
-                    
-        }
-      }
-    }
-  }
-}
-// Voy a intentar refactorizar con foreach. Si quitas de aqui para abajo funciona
-const newDomain=()=>{
-  pronoun.array.forEach(element => {
-    adj.array.forEach()
-    
+        });
+      });
+    });
   });
 }
